@@ -74,11 +74,11 @@ lm.fit.mse; lm.fit2.mse; lm.fit3.mse; lm.fit4.mse; lm.fit5.mse
 
 # (b) Hypothesis testing using ANOVA:
 
-fit.1 <- lm(wage~age, data=train_wage)
-fit.2 <- lm(wage~poly(age,2), data=train_wage)
-fit.3 <- lm(wage~poly(age,3), data=train_wage)
-fit.4 <- lm(wage~poly(age,4), data=train_wage)
-fit.5 <- lm(wage~poly(age,5), data=train_wage)
+fit.1 <- lm(wage~age, data=Wage)
+fit.2 <- lm(wage~poly(age,2), data=Wage)
+fit.3 <- lm(wage~poly(age,3), data=Wage)
+fit.4 <- lm(wage~poly(age,4), data=Wage)
+fit.5 <- lm(wage~poly(age,5), data=Wage)
 
 
 # generating f-stats using ANOVA
