@@ -144,13 +144,13 @@ fit.step2.mse; fit.step3.mse; fit.step4.mse; fit.step5.mse; fit.step6.mse; fit.s
 # 7 appears to be our optimal number of cut-points
 
 
-# Producing predictions and plotting the fit (same process as the polynomial fit)
+# Producing predictions and se bands
 agelims <- range(age)
 age.grid <- seq(from=agelims[1], to=agelims[2])
 preds <- predict(fit.step7,newdata=list(age=age.grid), se=TRUE)
 se.bands <- cbind(preds$fit+2*preds$se.fit, preds$fit-2*preds$se.fit)
 
-# Plotting the data and adding the fit from the degree-4 polynomial
+# Plotting the data
 par(mfrow=c(1,1), mar=c(4.5, 4.5, 1, 1), oma=c(0,0,0,0))
 plot(age, wage, xlime=agelims, cex=.5, col="darkgrey")
 title("7-Cut Step Function", outer=T)
