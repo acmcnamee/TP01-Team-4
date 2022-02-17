@@ -39,8 +39,6 @@ train_wage <- Wage[train,]
 test_wage <- Wage[-train,]
 lm.fit <- lm(wage~age, data=train_wage)
 
-attach(Wage)
-
 
 
 
